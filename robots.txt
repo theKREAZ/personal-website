@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Disallow specific files if needed
+# Disallow: /private/
+# Disallow: /temp/
