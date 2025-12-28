@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://www.thekreaz.com/sitemap.xml
-
-# Disallow specific files if needed
-# Disallow: /private/
-# Disallow: /temp/
