@@ -102,16 +102,16 @@ body::before {
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(135deg, #00d4ff, #a200ff, #ff006e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 3s ease infinite;
+    animation: hueRotate 5s linear infinite;
 }
 
-@keyframes gradientShift {
-    0%, 100% { filter: hue-rotate(0deg); }
-    50% { filter: hue-rotate(20deg); }
+@keyframes hueRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
 }
 
 .nav-links {
@@ -135,7 +135,8 @@ body::before {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(135deg, #ff006e, #ff4500, #ff0055);
+    animation: hueRotate 4s linear infinite;
     transition: width var(--transition-speed);
 }
 
@@ -185,11 +186,11 @@ body::before {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(135deg, #00ffd9, #00ff88, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradientShift 3s ease infinite;
+    animation: hueRotate 6s linear infinite;
 }
 
 /* ==========================================
@@ -571,7 +572,7 @@ a.social:hover {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(135deg, #ff006e, #d900ff, #00d4ff);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -579,6 +580,7 @@ a.social:hover {
     font-size: 2rem;
     color: white;
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    animation: hueRotate 6.5s linear infinite;
 }
 
 .about-card h3 {
@@ -650,13 +652,26 @@ a.social:hover {
     position: relative;
 }
 
+@keyframes skillBarFlow {
+    0% { 
+        background-position: 200% 0;
+        filter: hue-rotate(0deg);
+    }
+    100% { 
+        background-position: -200% 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(90deg, #00ff88, #00ffdd, #00d4ff, #00ff88);
+    background-size: 200% 100%;
     border-radius: 10px;
     transition: width 1.5s ease-out;
     position: relative;
     overflow: hidden;
+    animation: skillBarFlow 3s linear infinite;
 }
 
 .skill-progress::after {
@@ -882,12 +897,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--accent-color), var(--accent-secondary));
+    background: linear-gradient(135deg, #a200ff, #5e00ff, #00d4ff);
     border-radius: 10px;
+    animation: hueRotate 7s linear infinite;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--accent-secondary), var(--accent-color));
+    background: linear-gradient(135deg, #a200ff, #5e00ff, #00d4ff);
+    border-radius: 10px;
+    animation: hueRotate 4s linear infinite;
 }
 
 /* Selection Color */
